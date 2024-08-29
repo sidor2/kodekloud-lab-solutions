@@ -1,0 +1,7 @@
+/datacenter-keypair.pem
+aws-labs/level3/lab2/terraform.tfstate.backup
+aws-labs/level3/lab2/terraform.tfstate
+aws-labs/level3/lab2/plan
+aws-labs/level3/lab2/.terraform.lock.hcl
+aws-labs/level3/lab2/.terraform/providers/registry.terraform.io/hashicorp/aws/5.64.0/linux_amd64/LICENSE.txt
+aws-labs/level3/lab2/.terraform/providers/registry.terraform.io/hashicorp/aws/5.64.0/linux_amd64/terraform-provider-aws_v5.64.0_x5
