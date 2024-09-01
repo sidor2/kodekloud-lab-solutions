@@ -1,0 +1,51 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: CloudFormation Stack to create a Lambda function with an IAM role
+
+Resources:
+  LambdaExecutionRole:
+    Type: 'AWS::IAM::Role'
+    Properties: 
+      RoleName: lambda_execution_role
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: 'lambda.amazonaws.com'
+            Action: 'sts:AssumeRole'
+      # Policies:
+      #   - PolicyName: LambdaExecutionPolicy
+      #     PolicyDocument:
+      #       Version: '2012-10-17'
+      #       Statement:
+      #         - Effect: Allow
+      #           Action:
+      #             - 'logs:CreateLogGroup'
+      #             - 'logs:CreateLogStream'
+      #             - 'logs:PutLogEvents'
+      #           Resource: '*'
+  
+  DatacenterLambdaFunction:
+    Type: 'AWS::Lambda::Function'
+    Properties:
+      FunctionName: nautilus-lambda
+      Runtime: python3.10
+      Handler: index.lambda_handler
+      Role: !GetAtt LambdaExecutionRole.Arn
+      Code:
+        ZipFile: |
+          def lambda_handler(event, context):
+              return {
+                  'statusCode': 200,
+                  'body': 'Welcome to KKE AWS Labs!'
+              }
+      Timeout: 10
+
+Outputs:
+  LambdaFunctionName:
+    Description: "Name of the Lambda function"
+    Value: !Ref DatacenterLambdaFunction
+
+  LambdaExecutionRole:
+    Description: "IAM Role for Lambda function"
+    Value: !Ref LambdaExecutionRole
