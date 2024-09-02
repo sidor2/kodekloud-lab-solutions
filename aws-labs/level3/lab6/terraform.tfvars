@@ -1,0 +1,1 @@
+bucket_name = "datacenter-web-5442"
