@@ -18,3 +18,7 @@ aws-labs/level3/lab3/.terraform/providers/registry.terraform.io/hashicorp/aws/5.
 */*/*/.terraform/providers/registry.terraform.io/hashicorp/aws/*/linux_amd64/LICENSE.txt
 */*/*/.terraform/providers/registry.terraform.io/hashicorp/aws/*/linux_amd64/terraform-provider-aws_v*_x5
 */*/*/.terraform/
+aws-labs/level3/lab7/ignore/imported-state
+aws-labs/level3/lab7/ignore/imported-main
+aws-labs/level3/lab7/ignore/generated.tf
+aws-labs/level3/lab7/ignore/iam.tf
