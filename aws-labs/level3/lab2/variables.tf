@@ -18,9 +18,21 @@ variable "key_name" {
   type = string
 }
 
+
+variable "proj_name" {  
+  description = "The name of the project"
+  type = string
+}
+
 variable "region" {
   description = "The region where the resources will be created"
   type = string
   default = "us-east-1"
+}
+
+variable "profile" {
+  description = "The name of the AWS CLI profile to use"
+  type = string
+  default = "kodek"
 }
 
