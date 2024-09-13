@@ -1,4 +1,4 @@
-
+### Scaling and Managing Kubernetes Clusters with Amazon EKS
 
 1. the cluster needs to use the default VPC with availability zones a, b, and c to ensure high availability across different physical locations.
 2. create an EKS cluster named devops-eks, along with an IAM role for the cluster named eksClusterRole. 

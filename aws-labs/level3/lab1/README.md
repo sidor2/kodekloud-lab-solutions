@@ -1,4 +1,4 @@
-
+### Deploying and Managing Applications on AWS
 
 1. Create a private RDS instance named devops-rds using a free tier template.
 - The engine type must be MySQL v8.0.36, and it must be a db.t3.micro type instance.
