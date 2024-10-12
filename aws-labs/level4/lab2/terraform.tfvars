@@ -1,0 +1,10 @@
+region = "us-west-2"
+profile = "kodek"
+account_id = "123456789012"
+s3_bucket_name        = "devops-deployment-21011"
+project_name          = "devops"
+codecommit_repo_name  = "devops-webapp-repo"
+codepipeline_name     = "devops-webapp-pipeline"
+codebuild_project_name = "devops-build-project"
+codebuild_role_name   = "devops-codebuild-role"
+
