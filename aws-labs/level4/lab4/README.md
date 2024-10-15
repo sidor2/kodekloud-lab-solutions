@@ -1,3 +1,5 @@
+## Integrating AWS SQS and SNS for Reliable Messaging
+
 You are required to use AWS CloudFormation to deploy the necessary resources in your AWS account. The stack name must be devops-priority-stack and it should create the following resources:
 
 1. Two SQS queues named devops-High-Priority-Queue and devops-Low-Priority-Queue.
