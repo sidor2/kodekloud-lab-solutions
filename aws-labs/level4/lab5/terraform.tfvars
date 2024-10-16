@@ -1,0 +1,7 @@
+region = "us-east-1"
+profile = "kodek"
+account_id = "730335630302"
+project_name = "xfusion"
+v = "3"
+username = "kk_labs_user_370608"
+api_key = "supersecretapikey123"
