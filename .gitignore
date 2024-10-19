@@ -22,3 +22,7 @@ aws-labs/level3/lab7/ignore/imported-state
 aws-labs/level3/lab7/ignore/imported-main
 aws-labs/level3/lab7/ignore/generated.tf
 aws-labs/level3/lab7/ignore/iam.tf
+aws-labs/level4/lab5/*
+aws-labs/level4/lab5-cdk/*
+
+aws-labs/level4/lab5-cdk/jest.config.js
