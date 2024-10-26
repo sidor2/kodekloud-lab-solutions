@@ -1,0 +1,29 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo Installing dependencies...
+  pre_build:
+    commands:
+      - echo Logging in to Amazon ECR...
+      - aws ecr get-login-password --region "${var.region}" | docker login --username AWS --password-stdin "${aws_ecr_repository.ecr_repo.repository_url}"
+  build:
+    commands:
+      - echo Building the Docker image...
+      - docker build -t "${aws_ecr_repository.ecr_repo.repository_url}:latest" .
+  post_build:
+    commands:
+      - echo Pushing the Docker image to ECR...
+      - docker push "${aws_ecr_repository.ecr_repo.repository_url}:latest"
+      - echo Creating imagedefinitions.json file...
+      - printf '[{"name":"%s","imageUri":"%s"}]' "${var.proj_name}-container" "${aws_ecr_repository.ecr_repo.repository_url}:latest" > imagedefinitions.json
+
+artifacts:
+  files:
+    - '**/*'
+  discard-paths: yes
+  secondary-artifacts:
+    imagedefinitions:
+      files:
+        - imagedefinitions.json
