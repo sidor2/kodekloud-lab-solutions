@@ -1,0 +1,22 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "Installing dependencies"
+      - pip install -r requirements.txt -t .
+  
+  build:
+    commands:
+      - echo "Packaging Lambda function"
+      - zip -r function.zip .
+
+  post_build:
+    commands:
+      - echo "Updating Lambda function code"
+      - aws lambda update-function-code --function-name devops-lambda-function --zip-file fileb://function.zip
+      - echo "Lambda function updated successfully"
+  
+artifacts:
+  files:
+    - function.zip
