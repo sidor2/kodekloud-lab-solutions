@@ -1,3 +1,5 @@
+## Deploying Containerized Applications with AWS ECS
+
 The DevOps team is working on automating the deployment of a containerized Flask application using AWS services like ECR, CodeCommit, CodePipeline, ECS and a Load Balancer. The goal of this task is to set up a continuous delivery pipeline that builds a Docker image, pushes it to ECR, and deploys the application to an ECS cluster.
 
 1. Create an ECR repository named xfusion-ecr-repo for storing Docker images.
