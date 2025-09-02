@@ -13,9 +13,7 @@ This repository contains a curated set of solutions for KodeKloud labs, covering
 - [Available Solutions](#available-solutions)
 - [Prerequisites](#prerequisites)
 - [Getting Started](#getting-started)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
+
 
 ## Available Solutions
 ### Level 3
