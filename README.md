@@ -2,7 +2,7 @@
 
 A comprehensive collection of solutions for KodeKloud labs, designed to assist learners in mastering DevOps, cloud computing, and related technologies.
 
-[![Python](https://img.shields.io/badge/python-3.8%2B-blue)](https://www.python.org)
+[![Terraform](https://img.shields.io/badge/Terraform-1.12%2B-blue?logo=terraform)](https://www.terraform.io/)
 [![Last Updated](https://img.shields.io/badge/Last%20Updated-Sep%2001,%202025-lightgrey)](https://github.com/sidor2/kodekloud-lab-solutions)
 
 ## Overview
